@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fraxinami Noticias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- OneSignal -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    window.OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "15026be6-6045-4c7a-b421-ea8e20707386",
+        serviceWorkerPath: "OneSignalSDKWorker.js",
+        serviceWorkerParam: { scope: "/" }
+      });
+    });
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #aaa;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn-site {
+      background: #222;
+      color: white;
+    }
+
+    .btn-site:hover {
+      background: #333;
+    }
+
+    /* Mejora visual del botón OneSignal */
+    .onesignal-customlink-container {
+      margin: 15px 0;
+    }
+
+    .onesignal-customlink-container button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #ff2c6d;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .onesignal-customlink-container button:hover {
+      background: #ff4c85;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Fraxinami Noticias</h1>
+    <p>Activa las notificaciones y no te pierdas ningún contenido 🔥</p>
+
+    <!-- 🔔 BOTÓN REAL DE ONESIGNAL -->
+    <div class="onesignal-customlink-container"></div>
+
+    <!-- 🌐 BOTÓN A TU WEB -->
+    <button class="btn btn-site" onclick="window.location.href='https://www.fraxinami.com'">
+      Ir al sitio principal
+    </button>
+  </div>
+
+</body>
+</html>
